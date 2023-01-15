@@ -1,13 +1,13 @@
 
-DROP TABLE genres;
-DROP TABLE sellings;
-DROP TABLE artists;
+DROP TABLE genre;
+DROP TABLE sell;
+DROP TABLE artist;
 
 CREATE TABLE artist (
         id int NOT NULL,
 	name varchar(80) NOT NULL,
 	country varchar(50),
-	tcu varchar(20),
+	tcu float4,
 	years int
 );
 
@@ -22,7 +22,7 @@ CREATE TABLE genre (
 CREATE TABLE sell (
 	id int NOT NULL,
 	artist_id int NOT NULL,
-	selling varchar(20) NOT NULL
+	selling int
 );
 
 alter table artist add constraint PK_artist PRIMARY KEY (id);
